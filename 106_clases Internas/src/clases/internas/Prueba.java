@@ -5,10 +5,6 @@
  */
 package clases.internas;
 
-/**
- *
- * @author enrique
- */
 public class Prueba {
 
     /**

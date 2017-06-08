@@ -48,7 +48,7 @@ public class ClientePrivado {
         return saldo;
     }
 
-    private void setSaldo(double saldo) {
+    public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 }

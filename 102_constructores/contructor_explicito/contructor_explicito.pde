@@ -2,7 +2,7 @@ Circulo c1;
 
 void draw() {
   // Este constructor no existe en realidad.
-  c1 = new Circulo(15);
+  c1 = new Circulo(15, 15, 10);
   println("El diametro de la circunferencia es " + c1.getDiametro());
   
   stop();

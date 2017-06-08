@@ -13,6 +13,7 @@ public class PruebaPrivadaAcierto {
 
     public static void main(String[] args) {
         ClientePrivado cp = new ClientePrivado("Jorge Almeida", "0001", 12000.15);
-        System.out.println(cp.getNombre());
+        cp.setSaldo(10000.15);
+        cp.imprimirDatos();
     }
 }

@@ -9,31 +9,35 @@ package clases.internas;
  *
  * @author enrique
  */
-public class Test {
+public class Prueba {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("**** Prueba del Externo 1 ****");
         // Una objeto de la clase interna no existe hasta que un objeto de la
         // clase externa es creado.
-        Externa oExterno = new Externa(1);
-        Externa.Interna oInterno = oExterno.new Interna(2);
+        Externa1 oExterno1 = new Externa1(1);
+        Externa1.Interna oInterno = oExterno1.new Interna(2);
         
         // Una clase interna puede acceder a los atributos privado de un objeto
         // de clase externa.
         oInterno.accederAtributosExternos();
         
+        //-------------------------------------------------------------------
+        System.out.println("**** Prueba del Externo 2 ****");
         // Tambien es posible acceder a los elementos privados de una clases
         // interna a través de la clase externa.
-        Externa oExterno2 = new Externa(1, 100);
+        Externa2 oExterno2 = new Externa2(1, 100);
         oExterno2.accederAtributosInternos();
         
         //-------------------------------------------------------------------
-        
+        System.out.println("**** Prueba del Externo 3 ****");
         // Una clase anidada, difiere con la interna en que las clases 
         // son estáticas
-        Externa.Anidada oAnidado = new Externa.Anidada(3);
+        Externa3.Anidada oAnidado = new Externa3.Anidada(3);
+        Externa3.Anidada.accederAtributosEstaticosExternos();
         oAnidado.funcionNoEstatica();
         
     }

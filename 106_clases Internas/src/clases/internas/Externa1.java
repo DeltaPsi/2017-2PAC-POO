@@ -7,25 +7,25 @@ package clases.internas;
 
 public class Externa1 {
 
-    private int atrExterno;
+    private int atributoExterno;
 
     public Externa1(int externo) {
-        this.atrExterno = externo;
+        this.atributoExterno = externo;
         System.out.println("Creada la clase externa");
     }
 
     // Clase interna (Inner Class)
     class Interna {
 
-        private int atrInterno;
+        private int atributoInterno;
 
         public Interna(int interno) {
-            this.atrInterno = interno;
+            this.atributoInterno = interno;
             System.out.println("Creada la clase interna");
         }
 
         public void accederAtributosExternos() {
-            System.out.println("El valor externo es: " + atrExterno);
+            System.out.println("El valor del atributo externo es: " + atributoExterno);
         }
     }    
 }

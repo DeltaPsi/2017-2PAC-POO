@@ -30,12 +30,13 @@ public class Prueba {
         
         //-------------------------------------------------------------------
         System.out.println("**** Prueba del Externo 3 ****");
-        // Una clase anidada, difiere con la interna en que las clases 
-        // son estáticas
-        Externa3.Anidada oAnidado = new Externa3.Anidada(3);
-        Externa3.Anidada.accederAtributosEstaticosExternos();
+        // Las clases anidadas son clases estáticas. Sin embargo, permiten crear
+        // objetos, como puede verse a continuación
+        Externa3.setAtributoExternoStatic(100);
+        Externa3.Anidada oAnidado = new Externa3.Anidada(0);
         oAnidado.funcionNoEstatica();
-        
-    }
+        // Los métodos estáticos, solo pueden accederse a través de la clase.
+        Externa3.Anidada.accederAtributosEstaticosExternos();
+       }
     
 }

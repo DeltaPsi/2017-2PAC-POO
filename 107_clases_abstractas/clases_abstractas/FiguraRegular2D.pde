@@ -12,7 +12,7 @@ abstract class FiguraRegular2D {
   }
   
   protected void getPoligono(float x, float y, float numeroLado, float longitud) {
-    float alpha = TWO_PI / numeroLado;
+    float alpha = TWO_PI / numeroLado;   
     
     beginShape();
     vertex(x, y);

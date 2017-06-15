@@ -7,7 +7,11 @@ package clases.internas;
 
 public class Externa3 {
     
-    private static int atrExterno = 2017;
+    private static int atributoExterno;
+    
+    public static void setAtributoExternoStatic(int atributo) {
+        atributoExterno = atributo;
+    }
     
     // Clase anidada (Nested Class)
     static class Anidada {
@@ -21,7 +25,7 @@ public class Externa3 {
         }
         
         public static void accederAtributosEstaticosExternos() {
-            System.out.println("El atributo static externo es: " + atrExterno);
+            System.out.println("El atributo static externo es: " + atributoExterno);
         }
     }
 }

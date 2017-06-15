@@ -4,7 +4,6 @@ class Triangulo extends FiguraRegular2D {
   }
   
   public void dibujar() {
-    fill(256);
     this.getPoligono(100, 100, 3, 100);
   }
   

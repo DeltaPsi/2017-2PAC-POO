@@ -7,11 +7,13 @@ void setup() {
   figuras[0] = new Triangulo(100);
   figuras[1] = new Cuadrado(100);
   figuras[2] = new Pentagono(100);
-}
+}  
 
 void draw() {
-  figuras[0].dibujar();
-  figuras[1].dibujar();
-  figuras[2].dibujar();
+  for (int i = 0; i < 3; i++){
+    figuras[i].dibujar();
+    println("Perimetro de " + figuras[i].identificarFigura() + " es " + figuras[i].calcularPerimetro());
+    println("Area de " + figuras[i].identificarFigura() + " es " + figuras[i].calcularArea());
+  }
   stop();
 }

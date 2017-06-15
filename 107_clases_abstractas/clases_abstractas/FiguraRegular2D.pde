@@ -12,7 +12,9 @@ abstract class FiguraRegular2D {
   }
   
   protected void getPoligono(float x, float y, float numeroLado, float longitud) {
-    float alpha = TWO_PI / numeroLado;   
+    float alpha = TWO_PI / numeroLado;
+    
+    fill(256);
     
     beginShape();
     vertex(x, y);
@@ -25,6 +27,10 @@ abstract class FiguraRegular2D {
     }
     
     endShape(CLOSE);
+  }
+  
+  protected String identificarFigura() {
+    return this.getClass().getSimpleName();
   }
   
   abstract public void dibujar();

@@ -1,4 +1,6 @@
-public class Animal {
+package aves;
+
+public class Ave {
     private String nombre;
 
     /**

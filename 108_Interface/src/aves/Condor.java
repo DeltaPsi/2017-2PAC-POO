@@ -1,3 +1,5 @@
+package aves;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,11 +10,16 @@
  *
  * @author enrique
  */
-public class Condor extends Animal implements IVuela {
-
+public class Condor extends Ave implements IVuela {
+    public Condor() {
+        super.setNombre("Condor");
+    }
+    
     @Override
     public void volar() {
-        System.out.println("El Condor vuela");
+        System.out.println("Condor vuela");
     }
+
+
     
 }

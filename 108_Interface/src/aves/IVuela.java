@@ -1,3 +1,5 @@
+package aves;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +10,6 @@
  *
  * @author enrique
  */
-public interface INada {
-    public void nadar();
+public interface IVuela {
+    public void volar();
 }

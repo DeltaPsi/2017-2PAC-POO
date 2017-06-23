@@ -1,3 +1,5 @@
+package aves;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,16 +10,15 @@
  *
  * @author enrique
  */
-public class Pato extends Animal implements IVuela, INada{
+public class Pinguino extends Ave implements INada {
 
-    @Override
-    public void volar() {
-        System.out.println("El pato vuela");
+    public Pinguino() {
+        super.setNombre("Pingüino");
     }
-
+    
     @Override
     public void nadar() {
-        System.out.println("El pato nada");
+        System.out.println("Pingüino nada");
     }
     
 }

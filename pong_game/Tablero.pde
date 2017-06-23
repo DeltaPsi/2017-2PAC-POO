@@ -1,7 +1,4 @@
-
-import java.util.*;
-
-public class Tablero extends FiguraFija {
+/*public class Tablero extends FiguraFija {
 
     public Tablero() {
     }
@@ -11,6 +8,7 @@ public class Tablero extends FiguraFija {
 
 
 
-    public abstract void dibujar();
+    public void dibujar() {
+    }
 
-}
+}*/

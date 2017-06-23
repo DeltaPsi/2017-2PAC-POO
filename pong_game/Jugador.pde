@@ -3,18 +3,24 @@ import java.util.*;
 
 public class Jugador {
 
-    public Jugador() {
+    public Jugador(String nombre) {
+      this.nombre = nombre;
+      this.puntos = 0;
     }
 
     private int puntos;
+    private String nombre;
 
     public int getPuntos() {
-        // TODO implement here
-        return 0;
+        return this.puntos;
     }
 
-    public void setPuntos() {
-        // TODO implement here
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+    
+    public void incrementar() {
+      this.puntos++;
     }
 
 }

@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class Escena {
+public static class Escena {
 
     public Escena() {
     }

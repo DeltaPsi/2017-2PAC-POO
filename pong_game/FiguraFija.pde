@@ -1,21 +1,15 @@
 
-import java.util.*;
-
-public abstract class FiguraFija {
-
-  public FiguraFija(Posicion origen, float ancho, float alto, color relleno) {
-    this.origen = origen;
-    this.ancho = ancho;
-    this.alto = alto;
-    this.relleno = relleno;
+abstract public class FiguraFija extends Figura {
+  protected float anchura;
+  protected float altura;
+  
+  public FiguraFija(float posicionX, float posicionY, color relleno, float anchura, float altura) {
+    super(posicionX, posicionY, relleno);
+    
+    this.anchura = anchura;
+    this.altura = altura;
   }
 
-  protected float ancho;
-  protected float alto;
-  protected color relleno;    
-  protected Posicion origen;
-
-
+  // El metodo continua abstract, la clase hija lo implementara
   public abstract void dibujar();
-
 }

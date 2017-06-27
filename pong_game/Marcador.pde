@@ -1,27 +1,27 @@
 
-import java.util.*;
-
 public class Marcador extends FiguraFija {
-
-  public Marcador() {
-    super(
-      new Posicion (0, 0),
-      width,
-      100,
-      color(127)
-    );
+  private int[] puntajes;
+  
+  public Marcador(float posicionX, float posicionY, color relleno, float anchura, float altura) {
+    super(posicionX, posicionY, relleno, anchura, altura);
+    
+    this.puntajes = new int[2];
+    this.puntajes[0] = 0;
+    this.puntajes[1] = 0;
   }
 
-  private int[] puntajes;
-
-
-  public void actualizarMarcador(Jugador[] jugadores) {
-      // TODO implement here
+  public void actualizar(Jugador[] jugadores) {
+      this.puntajes[0] = jugadores[0].puntos;
+      this.puntajes[1] = jugadores[1].puntos;
   }
 
   public void dibujar() {
+    // Para que no se observe el trazo del rectangulo
+    noStroke();
+    // Rellena de color la figura
     fill(this.relleno);
-    rect (this.origen.x, this.origen.y, this.ancho, this.alto);
+    // Dibujo del rectangulo
+    rect (this.posicionX, this.posicionY, this.anchura, this.altura);
   }
 
 }

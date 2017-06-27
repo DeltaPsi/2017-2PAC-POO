@@ -1,6 +1,4 @@
 
-import java.util.*;
-
 public class Jugador {
 
   public Jugador(String nombre) {

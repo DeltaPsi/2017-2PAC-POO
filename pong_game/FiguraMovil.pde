@@ -1,28 +1,26 @@
 
-import java.util.*;
+abstract public class FiguraMovil extends Figura{
 
-public abstract class FiguraMovil {
-
-  public FiguraMovil(Posicion origen, float longitud, color relleno) {
-    this.origen = origen;
-    this.longitud = longitud;
-    this.relleno = relleno;
-    
-    // Inicializacion manual
-    this.pixelPFX = 1;
-    this.pixelPFY = 1;
-  }
-
-  protected Posicion origen;
-  protected color relleno;
   protected float longitud;
-  protected int pixelPFX;
-  protected int pixelPFY;
+  protected int pixelPorFrameX;
+  protected int pixelPorFrameY;
   protected float orientacionX;
   protected float orientacionY;
+  
+  public FiguraMovil(float posicionX, float posicionY, color relleno, float longitud) {
+    super(posicionX, posicionY, relleno);
+    
+    this.longitud = longitud;
+    
+    // Inicializacion manual
+    this.pixelPorFrameX = 1;
+    this.pixelPorFrameY = 1;
+    this.orientacionX = 1;
+    this.orientacionY = 1;
+  }
 
-  public abstract void mover();
+  abstract public void mover();
 
-  public abstract void dibujar();
+  abstract public void dibujar();
 
 }

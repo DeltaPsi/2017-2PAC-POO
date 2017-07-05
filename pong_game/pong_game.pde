@@ -15,3 +15,18 @@ void setup() {
 void draw() {
   escena.play();
 }
+
+void keyPressed() {
+  if (key == 'w' || key == 'W') {
+    //Subir
+    escena.tablero.paletas[0].moverArriba();
+  } else if (key == 's' || key == 'S') {
+    // Bajar
+    escena.tablero.paletas[0].moverAbajo();
+  }
+  println(escena.tablero.paletas[0].posicionY);
+}
+
+void keyReleased() {
+  println("liberado");
+}

@@ -1,6 +1,6 @@
 public class Balon extends FiguraMovil {
-  public Balon(float posicionX, float posicionY, color relleno, float longitud) {
-    super(posicionX, posicionY, relleno, longitud);
+  public Balon(float posicionX, float posicionY, color relleno, float longitud, Tablero tablero) {
+    super(posicionX, posicionY, relleno, longitud, tablero);
   }
   
   public float getRadio() {

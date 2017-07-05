@@ -8,15 +8,14 @@ public class Tablero extends FiguraFija {
     
     float longitudBalon = 50;
     float longitudPaleta = 100;
-    float centroX = width / 2;
-    float centroY = height / 2;
     float balonY = this.posicionY + (this.altura / 2);
+    float paletaY = balonY - (longitudPaleta / 2);
     
-    this.balon = new Balon(this.anchura / 2, balonY, color(BLANCO), longitudBalon);
+    this.balon = new Balon(this.anchura / 2, balonY, color(BLANCO), longitudBalon, this);
     
     this.paletas = new Paleta[2];
-    this.paletas[0] = new Paleta(0, this.altura / 2, color(BLANCO), longitudPaleta, null);
-    this.paletas[1] = new Paleta(this.anchura, this.altura / 2, color(BLANCO), longitudPaleta, null);
+    this.paletas[0] = new Paleta(5, paletaY, color(BLANCO), longitudPaleta, this, null);
+    this.paletas[1] = new Paleta(this.anchura - 5, paletaY, color(BLANCO), longitudPaleta, this, null);
   }
 
   @Override
